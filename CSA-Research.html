@@ -45,7 +45,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-3 my-3">
-                                    <button type="button" class="btn btn-lg btn-block btn-light btn-custom" id="contact-submit">
+                                    <button type="button" class="btn btn-lg btn-block btn-light btn-custom" id="search" v-on:click = "search('test')">
                                         Search
                                     </button>
                                 </div>
@@ -53,15 +53,15 @@
                         </form>
 
                         <div class="filter-result">
-                            <p class="mb-30 ff-montserrat">Total events : 12</p>
+                            <p class="mb-30 ff-montserrat">Total events : 8</p>
 
-                            <div class="event-box d-md-flex align-items-center justify-content-between mb-30">
+                            <div class="event-box d-md-flex align-items-center justify-content-between mb-30" id = "#one">
                                 <div class="event-left my-4 d-md-flex align-items-center flex-wrap">
                                     <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex">
                                         EB
                                     </div>
                                     <div class="event-content">
-                                        <h5 class="text-center text-md-left">East Bay SPCA</h5>
+                                        <h5 class="text-center text-md-left">East Bay SPCA (Animal Shelter Care)</h5>
                                         <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
                                             <li class="mr-md-4">
                                                 <i class="zmdi zmdi-pin mr-2"></i> Oakland, Tri-Valley
@@ -76,7 +76,7 @@
                                     </div>
                                 </div>
                                 <div class="event-right my-4 flex-shrink-0">
-                                    <a href = "https://eastbayspca.org/get-involved/volunteer/become-a-volunteer/#1568149624135-0a374eeb-1465"class="btn d-block w-100 d-sm-inline-block btn-light">Apply now</a>
+                                    <a href = "https://eastbayspca.org/get-involved/volunteer/become-a-volunteer/#1568149624135-0a374eeb-1465"class="btn d-block w-100 d-sm-inline-block btn-light" target="_blank">Apply now</a>
                                 </div>
                             </div>
 
@@ -86,7 +86,7 @@
                                         KAH
                                     </div>
                                     <div class="event-content">
-                                        <h5 class="text-center text-md-left">Kids Against Hunger</h5>
+                                        <h5 class="text-center text-md-left">Kids Against Hunger (Helping Children in Need)</h5>
                                         <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
                                             <li class="mr-md-4">
                                                 <i class="zmdi zmdi-pin mr-2"></i> Tri-Valley
@@ -98,84 +98,157 @@
                                     </div>
                                 </div>
                                 <div class="event-right my-4 flex-shrink-0">
-                                    <a href="https://www.kahbayarea.org/how-to-help/join-a-packing-event?view=event&layout=list&controller=event&task=events" class="btn d-block w-100 d-sm-inline-block btn-light">Apply now</a>
+                                    <a href="https://www.kahbayarea.org/how-to-help/join-a-packing-event?view=event&layout=list&controller=event&task=events" class="btn d-block w-100 d-sm-inline-block btn-light" target="_blank">Apply now</a>
                                 </div>
                             </div>
 
                             <div class="event-box d-md-flex align-items-center justify-content-between mb-30">
                                 <div class="event-left my-4 d-md-flex align-items-center flex-wrap">
                                     <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex">
-                                        GD
+                                        SP
                                     </div>
                                     <div class="event-content">
-                                        <h5 class="text-center text-md-left">Graphic Designer</h5>
+                                        <h5 class="text-center text-md-left">Shanti Project (Dog walking)</h5>
                                         <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
                                             <li class="mr-md-4">
-                                                <i class="zmdi zmdi-pin mr-2"></i> Los Angeles
+                                                <i class="zmdi zmdi-pin mr-2"></i> San Francisco
                                             </li>
                                             <li class="mr-md-4">
-                                                <i class="zmdi zmdi-money mr-2"></i> 2500-3500/pm
+                                                <i class="zmdi zmdi-time mr-2"></i> Adaptive Schedule
                                             </li>
-                                            <li class="mr-md-4">
-                                                <i class="zmdi zmdi-time mr-2"></i> Full Time
+                                            <li>
+                                                <i></i> *Requirements: Background Check, Training
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="event-right my-4 flex-shrink-0">
-                                    <a href="#" class="btn d-block w-100 d-sm-inline-block btn-light">Apply now</a>
+                                    <a href="https://www.volunteermatch.org/search/opp3318782.jsp" class="btn d-block w-100 d-sm-inline-block btn-light" target="_blank">Apply now</a>
                                 </div>
                             </div>
 
                             <div class="event-box d-md-flex align-items-center justify-content-between mb-30">
                                 <div class="event-left my-4 d-md-flex align-items-center flex-wrap">
                                     <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex">
-                                        JS
+                                        AC
                                     </div>
                                     <div class="event-content">
-                                        <h5 class="text-center text-md-left">Javascript Developer</h5>
+                                        <h5 class="text-center text-md-left">American Cancer Society (Backroom volunteering)</h5>
                                         <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
                                             <li class="mr-md-4">
-                                                <i class="zmdi zmdi-pin mr-2"></i> Los Angeles
+                                                <i class="zmdi zmdi-pin mr-2"></i> Tri-Valley (Pleasanton)
                                             </li>
                                             <li class="mr-md-4">
-                                                <i class="zmdi zmdi-money mr-2"></i> 2500-3500/pm
+                                                <i class="zmdi zmdi-time mr-2"></i> Flexible schedule, must do at least 1 4hr shift/week
                                             </li>
-                                            <li class="mr-md-4">
-                                                <i class="zmdi zmdi-time mr-2"></i> Full Time
+                                            <li>
+                                                *MUST BE OVER 18, this job consists of heavy physical work
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
+                                <div class="event-right my-4 flex-shrink-0">
+                                    <a href="https://www.volunteermatch.org/search/opp2567469.jsp" class="btn d-block w-100 d-sm-inline-block btn-light" target="_blank">Apply now</a>
+                                </div>
+                            </div>
+                            
+                            <div class="event-box d-md-flex align-items-center justify-content-between mb-30">
+                                <div class="event-left my-4 d-md-flex align-items-center flex-wrap">
+                                    <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex">
+                                        CE
+                                    </div>
+                                    <div class="event-content">
+                                        <h5 class="text-center text-md-left">Children's Emergency Food Bank (Supporting students)</h5>
+                                        <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-pin mr-2"></i> Tri-Valley
+                                            </li>
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-time mr-2"></i> Volunteers needed when food drives are conducted
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="event-right my-4 flex-shrink-0">
+                                    <a href="https://www.childrensemergencyfoodbank.org/volunteer.html" class="btn d-block w-100 d-sm-inline-block btn-light" target="blank">Apply now</a>
+                                </div>
+                            </div>
+
+                            <div class="event-box d-md-flex align-items-center justify-content-between mb-30">
+                                <div class="event-left my-4 d-md-flex align-items-center flex-wrap">
+                                    <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex">
+                                        CD
+                                    </div>
+                                    <div class="event-content">
+                                        <h5 class="text-center text-md-left">City of Dublin Job Openings</h5>
+                                        <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-pin mr-2"></i> Tri-Valley (Dublin)
+                                            </li>
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-time mr-2"></i> Schedule will depend on the job you choose
+                                            </li>
+                                            <li>
+                                                *Multiple volunteer opportunities in Dublin, recruitments may close
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="event-right my-4 flex-shrink-0">
+                                    <a href="https://www.calopps.org/city-of-dublin" class="btn d-block w-100 d-sm-inline-block btn-light" target="_blank">Apply now</a>
+                                </div>
+                            </div>
+                            
+                            <div class="event-box d-md-flex align-items-center justify-content-between mb-30">
+                                <div class="event-left my-4 d-md-flex align-items-center flex-wrap">
+                                    <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex">
+                                        RC
+                                    </div>
+                                    <div class="event-content">
+                                        <h5 class="text-center text-md-left">American Red Cross Volunteering Opportunities</h5>
+                                        <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-pin mr-2"></i> San Francisco, South Bay
+                                            </li>
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-time mr-2"></i> Varies; To find schedules, you need to sign up for a job
+                                            </li>
+                                            <li>
+                                                *Attend volunteer fair on February 24th to speak with Red Cross reps for more information.
+                                                Teens and adults are welcome.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="event-right my-4 flex-shrink-0">
+                                    <a href="https://www.redcross.org/volunteer/become-a-volunteer/urgent-need-for-volunteers.html" class="btn d-block w-100 d-sm-inline-block btn-light" target="_blank">Apply now</a>
+                                </div>
+                                </div>
+
                                 <div class="event-box d-md-flex align-items-center justify-content-between mb-30">
                                     <div class="event-left my-4 d-md-flex align-items-center flex-wrap">
                                         <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex">
-                                            GD
+                                            SFE
                                         </div>
                                         <div class="event-content">
-                                            <h5 class="text-center text-md-left">Arjun Prashar</h5>
+                                            <h5 class="text-center text-md-left">San Francisco Education Fund (Classroom Volunteering)</h5>
                                             <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
                                                 <li class="mr-md-4">
-                                                    <i class="zmdi zmdi-pin mr-2"></i> Los Angeles
+                                                    <i class="zmdi zmdi-pin mr-2"></i> San Francisco
                                                 </li>
                                                 <li class="mr-md-4">
-                                                    <i class="zmdi zmdi-money mr-2"></i> 2500-3500/pm
+                                                    <i class="zmdi zmdi-time mr-2"></i> School hours for selected school
                                                 </li>
-                                                <li class="mr-md-4">
-                                                    <i class="zmdi zmdi-time mr-2"></i> Full Time
+                                                <li>
+                                                    *Volunteers aged 16 or above are welcome, you will receive training prior to getting the job
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="event-right my-4 flex-shrink-0">
-                                        <a href="#" class="btn d-block w-100 d-sm-inline-block btn-light">Apply now</a>
-                                    </div>
-                                </div>
                                 <div class="event-right my-4 flex-shrink-0">
-                                    <a href="#" class="btn d-block w-100 d-sm-inline-block btn-light">Apply now</a>
+                                    <a href="https://sfedfund.org/become-a-volunteer/" class="btn d-block w-100 d-sm-inline-block btn-light" target="_blank">Apply now</a>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
@@ -399,20 +472,27 @@ ul {
 <script>
     let site = Vue.createApp({
         data: function(){
-            return{
-                finder: 'Search'
-            }
+            let names = ["East Bay SPCA (Animal Shelter Care)", "Kids Against Hunger (Helping Children in Need)", "Shanti project (Dog walking)", "American Cancer Society (Backroom volunteering)", "Children's Emergency Food Bank (Supporting students)"]
         }
         ,methods: {
+            edit: function(input, text){
+                document.getElementByID(input).innerHTML=text;
+            },
             search: function(input){
-                return{
-                    input
-                }
+                let letters = [];
+               for (let i=0; i++; i<input.length){
+                    letters[i]=input.substring(i,i+1);
+               }
+               edit("search",letters);
             }
         }
     })
     site.mount('#site');
 </script>
+<script>
+
+</script>
+
         
 </html>
     
