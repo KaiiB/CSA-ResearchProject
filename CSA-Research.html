@@ -7,7 +7,7 @@
                  <div class="col-lg-10 mx-auto mb-4">
                     <div class="section-title text-center ">
                         <h3 class="top-c-sep top-title">Find opportunities.</h3>
-                        <p>Explore volunteer opportunities in the local area</p>
+                        <p id = "subtitle" >Explore volunteer opportunities in the local area</p>
                     </div>
                 </div>
             </div>
@@ -20,7 +20,7 @@
                             <div class="row">
                                 <div class="col-md-6 col-lg-3 my-3">
                                     <div class="input-group position-relative">
-                                        <input type="text" class="form-control" placeholder="Enter Your Keywords" id="keywords">
+                                        <input type="text" class="form-control" placeholder="Enter search words here." id="keywords">
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-3 my-3">
@@ -37,16 +37,16 @@
                                 <div class="col-md-6 col-lg-3 my-3">
                                     <div class="select-container">
                                         <select class="custom-select">
-                                            <option selected="">Select event Type</option>
-                                            <option value="1">Ui designer</option>
-                                            <option value="2">JS developer</option>
-                                            <option value="3">Web developer</option>
+                                            <option selected="">Select event type</option>
+                                            <option value="1">Volunteer</option>
+                                            <option value="2">Organization</option>
+                                            <option value="3">Tutor</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-lg-3 my-3">
-                                    <button type="button" class="btn btn-lg btn-block btn-light btn-custom" id="search" v-on:click = "search('test')">
-                                        Search
+                                <div class="col-md-6 col-lg-3 my-3" id = "main">
+                                    <button type="button" class="btn btn-lg btn-block btn-light btn-custom" id="sch" @click.prevent.stop ="search">
+                                        {{ place }}
                                     </button>
                                 </div>
                             </div>
@@ -61,7 +61,7 @@
                                         EB
                                     </div>
                                     <div class="event-content">
-                                        <h5 class="text-center text-md-left">East Bay SPCA (Animal Shelter Care)</h5>
+                                        <h5 class="text-center text-md-left">East Bay SPCA (Animal Shelter)</h5>
                                         <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
                                             <li class="mr-md-4">
                                                 <i class="zmdi zmdi-pin mr-2"></i> Oakland, Tri-Valley
@@ -254,29 +254,33 @@
 
                     <!-- START Pagination -->
                     <nav aria-label="Page navigation">
-                        <ul class="pagination pagination-reset justify-content-center">
+                        <ul class="pagination pagination-reset justify-content-center" class = "pages" id = "page">
                             <li class="page-item disabled">
-                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
-                                    <i class="zmdi zmdi-long-arrow-left"></i>
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true" class="pages">
+                                    <i class="zmdi zmdi-long-arrow-left"  @click.prevent.stop="clickLeft" class="pages"></i>
                                 </a>
                             </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item d-none d-md-inline-block"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item d-none d-md-inline-block"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">...</a></li>
-                            <li class="page-item"><a class="page-link" href="#">8</a></li>
+                            <li class="page-item"><a class="page-link" href="#" @click.prevent.stop="clickPage"id="1">1</a></li>
+                            <li class="page-item d-none d-md-inline-block"><a class="page-link" href="#"@click.prevent.stop="clickPage"id="2">2</a></li>
+                            <li class="page-item d-none d-md-inline-block"><a class="page-link" href="#"@click.prevent.stop="clickPage"id="3">3</a></li>
+                            <li class="page-item d-none d-md-inline-block"><a class="page-link" href="#"@click.prevent.stop="clickPage"id="4">4</a></li>
+                            <li class="page-item d-none d-md-inline-block"><a class="page-link" href="#"@click.prevent.stop="clickPage"id="5">5</a></li>
                             <li class="page-item">
-                                <a class="page-link" href="#">
-                                    <i class="zmdi zmdi-long-arrow-right"></i>
+                                <a class="page-link" href="#" class="pages">
+                                    <i class="zmdi zmdi-long-arrow-right"  @click.prevent.stop="clickRight" class="pages"></i>
                                 </a>
                             </li>
+                            <div id = "pagenumber">
+                                You are on page {{ currentPage }} 
                         </ul>
                     </nav>
                     <!-- END Pagination -->
                 </div>
             </div>
+            
 
         </div>
+
         <style>
             body{
     background:#f5f5f5;
@@ -299,6 +303,7 @@
 .career-form .form-control::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: #fff;
+  opacity: 50%;
 }
 
 .career-form .form-control::-moz-placeholder {
@@ -426,7 +431,7 @@ ul {
 }
 
 .event-overview .event-detail ul li i {
-  font-size: 20px;
+  font-size: 20px; 
   position: relative;
   top: 1px;
 }
@@ -467,31 +472,120 @@ ul {
     border: 1px solid black;
     border-radius: 40px;
 }
+#pagenumber {
+    font-weight: 600;
+  opacity: 0.75;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 5px;
+  border-radius: 40px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 20px;
+}
+
+.page-item{
+    font-size: 20px;
+}
+#subtitle{
+ padding: 20px;
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+#sch{
+  opacity: 0.75;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 50px;
+  border-radius: 10px;
+  border: 1px solid black;
+  font-size: 20px;
+  font-weight: 400;
+}
 </style>
+
 <script src="https://unpkg.com/vue@next"></script>
+
 <script>
-    let site = Vue.createApp({
-        data: function(){
-            let names = ["East Bay SPCA (Animal Shelter Care)", "Kids Against Hunger (Helping Children in Need)", "Shanti project (Dog walking)", "American Cancer Society (Backroom volunteering)", "Children's Emergency Food Bank (Supporting students)"]
-        }
-        ,methods: {
-            edit: function(input, text){
+    let app = Vue.createApp({
+    data(){
+        return {
+            names: ["East Bay SPCA (Animal Shelter Care)", "Kids Against Hunger (Helping Children in Need)", "Shanti project (Dog walking)", "American Cancer Society (Backroom volunteering)", "Children's Emergency Food Bank (Supporting students)"],
+            place: "Search"        
+        };
+    },           
+    methods: {
+            edit(input, text){
                 document.getElementByID(input).innerHTML=text;
             },
-            search: function(input){
+            search(){
+                let input = document.getElementById("keywords").value;
                 let letters = [];
-               for (let i=0; i++; i<input.length){
+                let match = [];
+                let output = 0;
+                let names =  ["East Bay SPCA (Animal Shelter)", "Kids Against Hunger (Helping Children in Need)", "Shanti project (Dog walking)", "American Cancer Society (Backroom volunteering)", "Children's Emergency Food Bank (Supporting students)", "City of Dublin Job Openings", "American Red Cross Volunteering Opportunities", "San Francisco Education Fund (Classroom Volunteering)"];
+                for (let i=0; i<input.length;i++){
                     letters[i]=input.substring(i,i+1);
                }
-               edit("search",letters);
+               for (let i=0; i<names.length; i++){
+                for (let j=0; j<names[i].length; j++){
+                    match[match.length+1]=names[i].substring(j,j+1);
+                }
+                }
+                match=match.filter(x => x !== undefined);
+                for (let l=0; l<letters.length; l++){
+                    if (letters[l]==match[l]){
+                        output++;
+                    }
+                }
+                
+               console.log(output);
+               this.place= output + " characters have matched with your search!";
             }
+               
+            },
+            
+})
+app.mount('#main');
+
+let app2 = Vue.createApp({
+    data() {
+        return{
+            pages: [1,2,3,4,5],
+            currentPage: 1,
+        };
+    },
+    methods: {
+         clickLeft() {
+               if (this.currentPage>1){
+                   this.currentPage--;
+               }
+                else{
+                    this.currentPage=1;
+                }
+                console.log(this.currentPage);
+               },
+        clickRight(){
+            if (this.currentPage<5){
+                this.currentPage++;
+               }
+                else{
+                    this.currentPage=5;
+                }
+                console.log(this.currentPage);
+            },
+        },
+        clickPage(){
+            this.currentPage=this.id;
         }
     })
-    site.mount('#site');
-</script>
-<script>
+
+app2.mount('#page');
 
 </script>
+
+
 
         
 </html>
